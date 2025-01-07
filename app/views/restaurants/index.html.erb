@@ -1,0 +1,11 @@
+
+<div class="container p-3 mt-3 border border-primary">
+  <h1 class="mb-3">Restaurants</h1>
+  <% @restaurants.each do |rest| %>
+    <p>
+      <span class="fw-bold">Name:</span> <%= rest.name %><br>
+      <span class="fw-bold">Address:</span> <%= rest.address %><br>
+      <span class="fw-bold">Category:</span> <%= rest.category %>
+    </p>
+  <% end %>
+</div>
