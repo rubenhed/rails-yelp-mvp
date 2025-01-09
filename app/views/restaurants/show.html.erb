@@ -1,0 +1,14 @@
+
+<div class="container p-3">
+  <h1>Restaurant</h1>
+  <p><%= @restaurant.name %></p>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.category %></p>
+  <h1>Reviews <%= link_to "New review", new_restaurant_review_path(@restaurant), class: "btn btn-primary"%></h1>
+  
+  <% @reviews.each do |review| %>
+    <p><%= "⭐"*review.rating %><br><%= review.content %></p>
+  <% end %>
+  
+  
+</div>
